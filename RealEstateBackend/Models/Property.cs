@@ -9,7 +9,7 @@ namespace RealEstateBackend.Models
     {
         public Guid PropertyID { get; set; }
         public int ListingNumber { get; set; }
-        public int AgentID { get; set; }
+        public Guid AgentID { get; set; }
         public int PropertyNumber { get; set; }
         public string StreetName { get; set; }
         public string City { get; set; }
@@ -21,8 +21,8 @@ namespace RealEstateBackend.Models
         public string PropertyDescription { get; set; }
         public DateTime ListingDate { get; set; } = DateTime.Now;
         public bool PropertySold { get; set; } = false;
-        public Decimal Longitude { get; set; }
-        public Decimal Latitude { get; set; }
+        public Double Longitude { get; set; }
+        public Double Latitude { get; set; }
 
         public virtual ListingAgent Agent { get; set; }
         public virtual List<string> PropertyTypes()
